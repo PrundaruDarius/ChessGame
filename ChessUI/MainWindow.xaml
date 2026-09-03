@@ -13,15 +13,20 @@
         <Grid x:Name="BoardGrid"
               Width="600"
               Height="600"
-              RenderOptions.BitmapScalingMode="HighQuality">
+              RenderOptions.BitmapScalingMode="HighQuality"
+              MouseDown="BoardGrid_MouseDown">
             <Grid.Background>
-                <ImageBrush ImageSource="Assets/board1.png"></ImageBrush>
+                <ImageBrush ImageSource="/Assets/board.png"></ImageBrush>
             </Grid.Background>
+            <UniformGrid x:Name="HighlightGrid"
+                         Rows="8"
+                         Columns="8"
+                         RenderOptions.BitmapScalingMode="HighQuality">
+                
+            </UniformGrid>
             <UniformGrid x:Name="PieceGrid"
                          Rows="8"
                          Columns="8"
-                         HorizontalAlignment="Stretch"
-                         VerticalAlignment="Stretch"
                          RenderOptions.BitmapScalingMode="HighQuality">
                 
             </UniformGrid>

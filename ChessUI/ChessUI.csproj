@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\board.png" />
     <None Remove="Assets\board1.png" />
     <None Remove="Assets\board2.png" />
     <None Remove="Assets\board3.png" />
@@ -19,8 +20,22 @@
     <None Remove="Assets\B_Pawn.png" />
     <None Remove="Assets\B_Queen.png" />
     <None Remove="Assets\B_Rook.png" />
+    <None Remove="Assets\chess-bishop-black.png" />
+    <None Remove="Assets\chess-bishop-white.png" />
+    <None Remove="Assets\chess-king-black.png" />
+    <None Remove="Assets\chess-king-white.png" />
+    <None Remove="Assets\chess-knight-black.png" />
+    <None Remove="Assets\chess-knight-white.png" />
+    <None Remove="Assets\chess-pawn-black.png" />
+    <None Remove="Assets\chess-pawn-white.png" />
+    <None Remove="Assets\chess-queen-black.png" />
+    <None Remove="Assets\chess-queen-white.png" />
+    <None Remove="Assets\chess-rook-black.png" />
+    <None Remove="Assets\chess-rook-white.png" />
     <None Remove="Assets\icon.ico" />
     <None Remove="Assets\mouse.png" />
+    <None Remove="Assets\pointerB.cur" />
+    <None Remove="Assets\pointerW.cur" />
     <None Remove="Assets\WPieces-Sheet.png" />
     <None Remove="Assets\W_Bishop.png" />
     <None Remove="Assets\W_King.png" />
@@ -35,6 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\board.png" />
     <Resource Include="Assets\board1.png" />
     <Resource Include="Assets\board2.png" />
     <Resource Include="Assets\board3.png" />
@@ -45,8 +61,22 @@
     <Resource Include="Assets\B_Pawn.png" />
     <Resource Include="Assets\B_Queen.png" />
     <Resource Include="Assets\B_Rook.png" />
+    <Resource Include="Assets\chess-bishop-black.png" />
+    <Resource Include="Assets\chess-bishop-white.png" />
+    <Resource Include="Assets\chess-king-black.png" />
+    <Resource Include="Assets\chess-king-white.png" />
+    <Resource Include="Assets\chess-knight-black.png" />
+    <Resource Include="Assets\chess-knight-white.png" />
+    <Resource Include="Assets\chess-pawn-black.png" />
+    <Resource Include="Assets\chess-pawn-white.png" />
+    <Resource Include="Assets\chess-queen-black.png" />
+    <Resource Include="Assets\chess-queen-white.png" />
+    <Resource Include="Assets\chess-rook-black.png" />
+    <Resource Include="Assets\chess-rook-white.png" />
     <Resource Include="Assets\icon.ico" />
     <Resource Include="Assets\mouse.png" />
+    <Resource Include="Assets\pointerB.cur" />
+    <Resource Include="Assets\pointerW.cur" />
     <Resource Include="Assets\WPieces-Sheet.png" />
     <Resource Include="Assets\W_Bishop.png" />
     <Resource Include="Assets\W_King.png" />

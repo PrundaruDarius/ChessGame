@@ -7,24 +7,24 @@ namespace ChessUI
     public static class Images
     {
         private static readonly Dictionary<PieceType, ImageSource> whiteSources = new()
-        {
-            {PieceType.Pawn,LoadImage("Assets/W_Pawn.png") },
-            {PieceType.Bishop,LoadImage("Assets/W_Bishop.png") },
-            {PieceType.King,LoadImage("Assets/W_King.png") },
-            {PieceType.Queen,LoadImage("Assets/W_Queen.png") },
-            {PieceType.Knight,LoadImage("Assets/W_Knight.png")},
-            {PieceType.Rook,LoadImage("Assets/W_Rook.png") }
+{
+    { PieceType.Pawn,   LoadImage("Assets/chess-pawn-white.png") },
+    { PieceType.Bishop, LoadImage("Assets/chess-bishop-white.png") },
+    { PieceType.King,   LoadImage("Assets/chess-king-white.png") },
+    { PieceType.Queen,  LoadImage("Assets/chess-queen-white.png") },
+    { PieceType.Knight, LoadImage("Assets/chess-knight-white.png") },
+    { PieceType.Rook,   LoadImage("Assets/chess-rook-white.png") }
+};
 
-        };
         private static readonly Dictionary<PieceType, ImageSource> blackSources = new()
-        {
-            { PieceType.Pawn, LoadImage("Assets/B_Pawn.png") },
-            { PieceType.Bishop, LoadImage("Assets/B_Bishop.png") },
-            { PieceType.King, LoadImage("Assets/B_King.png") },
-            { PieceType.Queen, LoadImage("Assets/B_Queen.png") },
-            { PieceType.Knight, LoadImage("Assets/B_Knight.png") },
-            { PieceType.Rook, LoadImage("Assets/B_Rook.png") }
-        };
+{
+    { PieceType.Pawn,   LoadImage("Assets/chess-pawn-black.png") },
+    { PieceType.Bishop, LoadImage("Assets/chess-bishop-black.png") },
+    { PieceType.King,   LoadImage("Assets/chess-king-black.png") },
+    { PieceType.Queen,  LoadImage("Assets/chess-queen-black.png") },
+    { PieceType.Knight, LoadImage("Assets/chess-knight-black.png") },
+    { PieceType.Rook,   LoadImage("Assets/chess-rook-black.png") }
+};
         private static ImageSource LoadImage(string filePath)
         {
             return new BitmapImage(new Uri(filePath, UriKind.Relative));

@@ -6,6 +6,15 @@
 
         public override Player Color { get; }
 
+        private static readonly Direction[] dirs = new Direction[]
+        {
+            Direction.NorthWest,
+            Direction.SouthWest,
+            Direction.NorthEast,
+            Direction.SouthEst
+
+        };
+
         public Bishop(Player color)
         {
             Color = color;
@@ -18,6 +27,9 @@
             return copy;
         }
 
-
+        public override IEnumerable<Move> GetMoves(Position from,Board board)
+        {
+            return MovePositionsInDirs(from, board, dirs).Select(to => new NormalMove(from, to));
+        }
     }
 }
