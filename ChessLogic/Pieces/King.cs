@@ -20,7 +20,39 @@
         {
             Color = color;
         }
-
+        private static bool IsUnmovedRoook(Position pos,Board board)
+        {
+            if (board.IsEmpty(pos))
+            {
+                return false;
+            }
+            Piece piece = board[pos];
+            return piece.Type == PieceType.Rook && !piece.HasMoved;
+        }
+        private static bool Allempty(IEnumerable<Position>positions,Board board)
+        {
+            return positions.All(pos => board.IsEmpty(pos));
+        }
+        private bool CanCastlekingSide(Position from,Board board)
+        {
+            if (HasMoved)
+            {
+                return false;
+            }
+            Position rookPos = new Position(from.Row, 7);
+            Position[] betweenposition = new Position[] { new(from.Row, 5), new(from.Row, 6) };
+            return IsUnmovedRoook(rookPos,board)&&Allempty(betweenposition, board);
+        }
+        private bool CanCastelQueenSide(Position from,Board board)
+        {
+            if(HasMoved)
+            {
+                return false;
+            }
+            Position rookPos=new Position(from.Row, 0);
+            Position[]betweenposition=new Position[] {new(from.Row,1),new(from.Row,2) };
+            return IsUnmovedRoook(rookPos, board) && Allempty(betweenposition, board);
+        }
         public override Piece Copy()
         {
             King copy = new King(Color);
@@ -47,6 +79,14 @@
            foreach(Position to in MovePosition(from, board))
             {
                 yield return new NormalMove(from, to);
+            }
+            if (CanCastlekingSide(from, board))
+            {
+                yield return new Castle(MoveType.CastleKS, from);
+            }
+            if (CanCastelQueenSide(from, board))
+            {
+                yield return new Castle(MoveType.CastleQS, from);
             }
         }
         public override bool CanCaptureOpponentKing(Position from, Board board)

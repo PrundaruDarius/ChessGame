@@ -8,7 +8,8 @@
         Title="Chess" Width="700" Height="800"
         Icon="Assets/icon.ico"
         WindowStartupLocation="CenterScreen"
-        Background="DarkGray">
+        Background="DarkGray"
+        KeyDown="Window_KeyDown">
     <Viewbox>
         <Grid x:Name="BoardGrid"
               Width="600"
@@ -30,6 +31,7 @@
                          RenderOptions.BitmapScalingMode="HighQuality">
                 
             </UniformGrid>
+            <ContentControl x:Name="MenuContainer"/>
         </Grid>
     </Viewbox>
   
